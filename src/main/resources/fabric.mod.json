@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "menufabric",
+  "version": "${version}",
+  "name": "MenuFabric",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/menufabric/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.moxueyao.menufabric.client.MenufabricDataGenerator"
+    ],
+    "main": [
+      "org.moxueyao.menufabric.Menufabric"
+    ]
+  },
+  "mixins": [
+    "menufabric.mixins.json",
+    {
+      "config": "menufabric.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
